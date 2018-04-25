@@ -1,0 +1,83 @@
+// ==========================================================================
+// COLORS
+// ==========================================================================
+
+ $white: #ffffff;
+ $black: #1b1b1b;
+ 
+ $theme_gray_dark: #565759;
+ $theme_gray_medium: #A6A8A7;
+ $theme_gray_light: #C9C9C9;
+ $theme_gray_background: #ececec;
+ $theme-error-red: #e23d3d;
+ 
+ $brand-light-blue: #6ccff6;
+ $brand-dark-blue: #429cc2;
+ $brand-dark-blue-2: #218ab1;
+ $brand-gray: #545759;
+
+
+/* Color Variables (These are the ones we should be using primarily) */
+$color-primary: $brand-dark-blue;
+$color-secondary: $brand-light-blue;
+$color-tertiary: $brand-dark-blue-2;
+
+// ==========================================================================
+// FONT SIZES
+// ==========================================================================
+
+// Document base font
+$base_font: 16;
+$base_grid: 24;
+
+// Paragraphs and lists
+$body_copy: 14;
+
+// Headings
+$h1: 66;
+$h2: 32;
+$h3: 24;
+$h4: 18;
+$h5: 16;
+
+// Table fonts
+$table_head: 18;
+$table_body: 14;
+
+// ==========================================================================
+// BREAKPOINT VARIABLES
+// ==========================================================================
+$phone: 20em; // 20 * 16 = 320
+$phone_wide: 30em; // 30 * 16 = 480
+$small_tablet: 37.5em; // 37.5 * 16 = 600
+$tablet: 48em; // 48 * 16 = 768
+$desktop: 62em; // 62 * 16 = 992
+
+// ==========================================================================
+// BOOTSTRAP OVERRIDES
+// ==========================================================================
+
+// COLOR OVERRIDES
+$primary:       $color-primary;
+$secondary:     $color-secondary;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+$dark:          $theme_gray_dark;
+
+// SPACING OVERRIDES
+$list-group-item-padding-y:         1.25rem;
+$list-group-item-padding-x:         1.75rem;
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+        0: 0,
+        1: ($spacer * 1),
+        2: ($spacer * 2),
+        3: ($spacer * 3),
+        4: ($spacer * 4),
+        5: ($spacer * 5)
+), $spacers);

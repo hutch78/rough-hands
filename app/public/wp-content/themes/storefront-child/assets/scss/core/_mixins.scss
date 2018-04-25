@@ -1,0 +1,92 @@
+/* See http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/ */
+
+/* =-x =-x =-x =-x =-x =-x =-x =-x=- x=-
+
+    Transitions
+
+=-x =-x =-x =-x =-x =-x= -x=- x=- x=- x=-x=-x=-=x- x= -*/
+@mixin ease-normal {
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+/* =-x =-x =-x =-x =-x =-x =-x =-x=- x=-
+
+    Make background images stretch the whole container
+
+=-x =-x =-x =-x =-x =-x= -x=- x=- x=- x=-x=-x=-=x- x= -*/
+@mixin wallpaper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* =-x =-x =-x =-x =-x =-x =-x =-x=- x=-
+
+    Pseudo-element related
+
+=-x =-x =-x =-x =-x =-x= -x=- x=- x=- x=-x=-x=-=x- x= -*/
+@mixin pseudo {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+/* =-x =-x =-x =-x =-x =-x =-x =-x=- x=-
+
+    Animations
+
+=-x =-x =-x =-x =-x =-x= -x=- x=- x=- x=-x=-x=-=x- x= -*/
+
+@mixin fade-in($duration: 5s, $delay: 0s) {
+    opacity: 0;
+
+    @keyframes fade-in {
+        100% {
+            opacity: 1;
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+    }
+    
+    -webkit-animation: fade-in $duration normal ease-out forwards 1 $delay;
+    animation: fade-in $duration normal ease-out forwards 1 $delay;
+}
+
+
+/**
+* Clearfix placeholder
+*/
+%clearfix {
+	zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+	
+	&:before, &:after {
+		content: "";
+    	display: table;
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+
+/* =-x =-x =-x =-x =-x =-x =-x =-x=- x=-
+
+    Buttons
+
+=-x =-x =-x =-x =-x =-x= -x=- x=- x=- x=-x=-x=-=x- x= -*/
+@mixin btn-background-color ($background-color: $color-secondary){
+    background-color: $background-color;
+    border-bottom: 3px solid darken($background-color, 8%);
+    
+    @include media-breakpoint-up(lg){
+        &.btn--large {
+            border-bottom: 6px solid darken($background-color, 8%);
+        }
+        &:hover {
+            background-color: darken($background-color, 10%);
+            border-bottom-color: darken($background-color, 15%);
+        }
+    }
+}

@@ -1,0 +1,75 @@
+/*
+Theme Name:   	Rough Hands
+Theme URI:    	https://github.com/hutch78/rough-hands
+Author:       	Jeremy Hutchcraft
+Author URI:     http://jhutchcraft.com
+Template:     	storefront
+Description:  	This is a child theme for WooThemes StoreFront theme
+Version:      	1.0.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	storefront
+*/
+
+// ==========================================================================
+// IMPORTS
+// ==========================================================================
+
+
+// ==========================================================================
+// $CORE UTILITIES
+// ==========================================================================
+@import "core/normalize";
+@import "core/vars";
+
+// ==========================================================================
+// BOOTSTRAP
+//
+// -----> IMPORTANT <------ make sure that vars import comes before this import
+//
+// ==========================================================================
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// @import "compass/utilities/general/clearfix";
+@import "core/mixins";
+@import "core/typography";
+@import "core/base";
+@import "core/global";
+
+
+// ==========================================================================
+// VENDORS
+// ==========================================================================
+
+/* 
+    @TODO: Figure out why gulp-sass-glob is not allowing us to include the following repetitive imports like this: @Import "components/**//*.scss"
+*/
+
+// ==========================================================================
+// COMPONENTS
+// ==========================================================================
+@import "components/**/*.scss";
+
+// ==========================================================================
+// PAGES
+// ==========================================================================
+@import "pages/*/*.scss";
+
+
+// ==========================================================================
+// DEVELOPMENT ONLY
+// ==========================================================================
+@import "style-guide";
+
+
+// ==========================================================================
+// QA
+// ==========================================================================
+@import "core/ie";
+
+
+// ==========================================================================
+// PRINT
+// ==========================================================================
+@import "core/print";

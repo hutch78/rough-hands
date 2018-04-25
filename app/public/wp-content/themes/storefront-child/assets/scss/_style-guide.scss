@@ -1,0 +1,77 @@
+// ==========================================================================
+// STYLE GUIDE STYLES
+// ==========================================================================
+.style-guide {
+    &__heading {
+        font-size: 1rem;
+        letter-spacing: 4px;
+        // text-transform: uppercase;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        .the-text {
+            display: inline-block;
+            background-color: white;
+            padding-right: 1rem;
+            position: relative;
+
+            @include media-breakpoint-up(md) {
+                padding-right: 2rem;
+
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                background-color: $color-primary;
+                width: 100em;
+                transform: translate3d(0, -50%, 0);
+                top: 50%;
+                left: 100%;
+                height: 1px;
+            }
+            code {
+                position: relative;
+                top: -4px;
+            }
+        }
+    }
+    &__section {
+        padding: .5rem;
+        background-color: white;
+        margin-bottom: 2rem;
+        @include media-breakpoint-up(md) {
+            padding: 2rem;
+        }
+        &__description {
+            padding: 1rem 1.5rem;
+            background-color: #f7f7f7;
+            border-left: 3px solid $color-secondary;
+        }
+        &--transparent {
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            .style-guide {
+                &__heading {
+                    .the-text {
+                        background-color: #f6f6f7;
+                    }
+                }
+            }
+        }
+    }
+}
+code {
+    background-color: rgba(162, 230, 255, 0.3);
+    font-size: .65em;
+    padding: 0.25em 0.65em;
+    text-transform: none;
+    color: #615e5e;
+    border-radius: 5px;
+}

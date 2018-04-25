@@ -1,0 +1,28 @@
+// ==========================================================================
+// PRINT STYLES
+// ==========================================================================
+
+@media print {
+    
+    // typography ideal for print
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        line-height: 1.3;
+        &.entry-title {
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+    }
+    
+    h1, h2, h3, h4, h5, h6, p, li, strong, em, i, span {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        letter-spacing: initial !important;
+    }
+
+
+    p, li {
+        font-size: 12pt !important;
+    }
+    
+}

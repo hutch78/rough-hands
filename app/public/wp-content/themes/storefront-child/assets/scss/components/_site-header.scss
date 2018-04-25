@@ -1,0 +1,48 @@
+.site-header {
+    padding: 0;
+    @extend .py-lg-2;
+    @extend .align-items-lg-center;
+    &__logo-wrapper {
+        max-width: 27.5rem;
+    }
+    &__nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @extend .d-lg-flex;
+
+        .menu-item {
+            @include media-breakpoint-up(lg){
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: black;
+        }
+        
+    }
+    .left-side-nav,
+    .right-side-nav {
+        @extend .d-lg-flex;
+        @extend .align-items-lg-center;
+    }
+    .left-side-nav {
+        .menu-item {
+            &:not(:last-child){
+                @extend .mr-lg-2;
+            }
+        }
+    }
+    .right-side-nav {
+        .menu-item {
+            &:not(:first-child){
+                @extend .ml-lg-2;
+            }
+        }
+    }
+}

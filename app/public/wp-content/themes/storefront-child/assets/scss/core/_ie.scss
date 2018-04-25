@@ -1,0 +1,16 @@
+// ==========================================================================
+// INTERNET EXPLORER STYLES
+// ==========================================================================
+
+@media all and (-ms-high-contrast:none)
+{
+    
+    /* IE11 */
+
+    // footer coming up to the top of the page behind the content
+    *::-ms-backdrop,
+    .your-selector-goes-here { 
+        display: none !important;
+    }
+    
+}
