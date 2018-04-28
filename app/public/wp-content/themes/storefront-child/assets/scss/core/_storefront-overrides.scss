@@ -1,0 +1,28 @@
+.left-sidebar {
+    .widget-area {
+        @include media-breakpoint-up(md){
+            width: 20%;
+            margin: 0;
+        }
+        @include media-breakpoint-up(lg){
+            width: 12%;
+        }
+    }
+    .content-area {
+        @include media-breakpoint-up(md){
+            width: 80%;
+            margin: 0;
+            padding-left: 4rem;
+        }
+        @include media-breakpoint-up(lg){
+            width: 88%;
+        }
+    }
+}
+
+
+.products.columns-3 {
+    @include media-breakpoint-down(lg){
+        padding: 0;
+    }
+}

@@ -5,3 +5,10 @@ Error: Unable to verify domain - missing secret key.
 ====End Log====
 
 
+04-28-2018 @ 06:02:34 - 
+====Stripe Version: 4.1.2====
+====Start Log====
+Keys are not set correctly.
+====End Log====
+
+

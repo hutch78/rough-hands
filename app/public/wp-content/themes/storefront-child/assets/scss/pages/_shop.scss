@@ -1,0 +1,53 @@
+body.tax-product_cat {
+
+    .woocommerce-breadcrumb {
+        display: none;
+    }
+    
+    .storefront-sorting {
+
+        @include media-breakpoint-up(lg){
+            display: flex;
+            justify-content: center;
+        }
+    
+        &:first-child {
+            display: none;
+        }
+        
+        .woocommerce-ordering,
+        .woocommerce-result-count {
+            display: none;
+        }
+    }
+
+    .rh-categories-list {
+        @extend .mb-2;
+        @extend .mb-lg-0;
+    }
+
+    .site-content {
+        > .col-full {
+            display: flex;
+            flex-direction: column-reverse;
+            @include media-breakpoint-up(md){
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    .products.columns-3 {
+        @include media-breakpoint-only(md){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .site-main .columns-3 ul.products li.product {
+        @include media-breakpoint-only(md){
+            width: 43.411765%;
+            margin-right: 5.8823529412% !important; 
+        }
+    }
+    
+}

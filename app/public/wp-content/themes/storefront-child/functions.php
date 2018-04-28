@@ -33,8 +33,9 @@ require('includes/login/rough-hands-custom-login.php');
 * Register new custom nav menus
 */
 register_nav_menus([
-	'left_side_nav' => "Left Side Navigation",
-	'right_side_nav' => "Right Side Navigation",
+	"left_side_nav" => "Left Side Navigation",
+    "right_side_nav" => "Right Side Navigation",
+    "categories_nav" => "Categories Navigation"
 ]);
 
 /**
@@ -43,6 +44,24 @@ register_nav_menus([
 function woocommerce_template_loop_product_title() {
     echo get_the_title();
 }
+
+/**
+* Enqueue custom javascript
+*/
+function rh_scripts()
+{
+
+
+    wp_enqueue_script('script',
+        get_stylesheet_directory_uri() . '/assets/js/scripts.js',
+        array('jquery'), // dependencies
+        '', // version,
+        true
+    );
+
+}
+
+add_action('wp_enqueue_scripts', 'rh_scripts');
 
 /**
  * Get the add to cart template for the loop.
@@ -81,3 +100,6 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'rough_hands_archive_add_to_
 function rough_hands_archive_add_to_cart_text() {
         return 'Reserve';
 }
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );

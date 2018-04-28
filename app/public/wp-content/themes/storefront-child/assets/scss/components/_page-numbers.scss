@@ -1,0 +1,27 @@
+.woocommerce-pagination {
+    ul.page-numbers {
+        li {
+            > .page-numbers { // why would they name the classes this way???? o____O
+                background: transparent;
+                &.current {
+                    background: transparent;
+                    opacity: 1;
+                    a {
+                    }
+                }
+            }
+        }
+        .page-numbers { // why would they name the classes this way???? o____O
+            text-decoration: none !important;
+            opacity: .5;
+            font-size: 1.5rem;
+            &:hover {
+                opacity: 1;
+            }
+            &.next,
+            &.prev {
+                display: none;
+            }
+        }
+    }
+}

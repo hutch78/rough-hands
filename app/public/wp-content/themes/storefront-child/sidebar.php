@@ -17,6 +17,12 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <div id="secondary" class="widget-area" role="complementary">
 	
-<?php woocommerce_maybe_show_product_subcategories('<li>'); ?>
+<?php wp_nav_menu(
+	array(
+		'theme_location'	=> 'categories_nav',
+		'container_class'	=> 'rh-categories-list-wrapper',
+		'menu_class'		=> 'rh-categories-list'
+	)
+); ?>
 
 </div><!-- #secondary -->
