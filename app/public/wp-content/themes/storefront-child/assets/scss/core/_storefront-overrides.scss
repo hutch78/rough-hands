@@ -26,3 +26,9 @@
         padding: 0;
     }
 }
+
+.col-1,
+.col-2 {
+    display: block !important;
+    max-width: 100% !important;
+}
