@@ -1,0 +1,38 @@
+.product-card {
+    &__title {
+        text-transform: none;
+        text-align: left;
+        line-height: 1.3;
+        @include media-breakpoint-up(lg){
+            min-height: 68px;
+        }
+        .product-card__link {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+    }
+    &__link {
+        color: black;
+        text-align: left;
+    }
+    &__description {
+        text-align: left;
+        @extend .mb-2;
+        p {
+            @include serif;
+        }
+    }
+    &__footer {
+        @extend .d-lg-flex;
+        @extend .justify-content-lg-between;
+        @extend .align-items-lg-end;
+
+        .price {
+            font-size: 1.75rem;
+            font-style: italic;
+            margin-bottom: 0 !important;
+        }
+        
+    }
+}

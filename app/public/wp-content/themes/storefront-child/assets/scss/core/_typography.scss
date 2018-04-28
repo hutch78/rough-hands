@@ -123,8 +123,13 @@ a {
 p {
     font-size: 1rem;
     line-height: 1.5;
-    @include sans-serif(400);
+    @include serif(400);
     max-width: $max-ch-length;
+    /* I have hinted that I Copy 6: */
+    font-size: 1rem;
+    color: black;
+    letter-spacing: 0.62px;
+    line-height: 1.7;
     
     &:not(:last-child) {
         margin-bottom: $body-margin-bottom;

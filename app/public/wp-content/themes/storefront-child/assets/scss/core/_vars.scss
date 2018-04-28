@@ -19,7 +19,7 @@
 
 /* Color Variables (These are the ones we should be using primarily) */
 $color-primary: $brand-dark-blue;
-$color-secondary: $brand-light-blue;
+$color-secondary: $theme-error-red;
 $color-tertiary: $brand-dark-blue-2;
 
 // ==========================================================================
@@ -65,7 +65,7 @@ $secondary:     $color-secondary;
 // $warning:       $yellow;
 // $danger:        $red;
 // $light:         $gray-100;
-$dark:          $theme_gray_dark;
+$dark:          black;
 
 // SPACING OVERRIDES
 $list-group-item-padding-y:         1.25rem;
@@ -81,3 +81,9 @@ $spacers: map-merge((
         4: ($spacer * 4),
         5: ($spacer * 5)
 ), $spacers);
+
+$input-btn-padding-y:         0;
+$input-btn-padding-x:         2rem;
+
+$btn-border-width:            2px;
+$btn-border-radius:            100em;
