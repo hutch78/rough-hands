@@ -303,7 +303,7 @@ table {
 
 /* Color Variables (These are the ones we should be using primarily) */
 /*!
- * Bootstrap v4.1.0 (https://getbootstrap.com/)
+ * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -355,7 +355,7 @@ html {
 @-ms-viewport {
   width: device-width; }
 
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
 
 body {
@@ -465,7 +465,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em; }
 
 pre {
@@ -720,12 +720,6 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #6c757d; }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 code {
   font-size: 87.5%;
@@ -2085,6 +2079,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .custom-select.is-valid ~ .valid-tooltip {
     display: block; }
 
+.was-validated .form-control-file:valid ~ .valid-feedback,
+.was-validated .form-control-file:valid ~ .valid-tooltip, .form-control-file.is-valid ~ .valid-feedback,
+.form-control-file.is-valid ~ .valid-tooltip {
+  display: block; }
+
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
   color: #28a745; }
 
@@ -2164,6 +2163,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .custom-select.is-invalid ~ .invalid-feedback,
   .custom-select.is-invalid ~ .invalid-tooltip {
     display: block; }
+
+.was-validated .form-control-file:invalid ~ .invalid-feedback,
+.was-validated .form-control-file:invalid ~ .invalid-tooltip, .form-control-file.is-invalid ~ .invalid-feedback,
+.form-control-file.is-invalid ~ .invalid-tooltip {
+  display: block; }
 
 .was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
   color: #dc3545; }
@@ -3132,8 +3136,7 @@ input[type="button"].btn-block {
     .input-group > .custom-file:not(:last-child) .custom-file-label::after {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0; }
-    .input-group > .custom-file:not(:first-child) .custom-file-label,
-    .input-group > .custom-file:not(:first-child) .custom-file-label::after {
+    .input-group > .custom-file:not(:first-child) .custom-file-label {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0; }
 
@@ -3233,11 +3236,12 @@ input[type="button"].btn-block {
       background-color: #e9ecef; }
 
 .custom-control-label {
+  position: relative;
   margin-bottom: 0; }
   .custom-control-label::before {
     position: absolute;
     top: 0.25rem;
-    left: 0;
+    left: -1.5rem;
     display: block;
     width: 1rem;
     height: 1rem;
@@ -3251,7 +3255,7 @@ input[type="button"].btn-block {
   .custom-control-label::after {
     position: absolute;
     top: 0.25rem;
-    left: 0;
+    left: -1.5rem;
     display: block;
     width: 1rem;
     height: 1rem;
@@ -3381,7 +3385,7 @@ input[type="button"].btn-block {
     bottom: 0;
     z-index: 3;
     display: block;
-    height: calc(calc(1.5rem + 2px) - 1px * 2);
+    height: 1.5rem;
     padding: 0 2rem;
     line-height: 1.5;
     color: #495057;
@@ -5195,6 +5199,7 @@ button.close {
     margin-right: 3px;
     margin-left: 3px;
     text-indent: -999px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.5); }
     .carousel-indicators li::before {
       position: absolute;
@@ -5675,12 +5680,12 @@ button.bg-dark:focus {
   -ms-flex-align: start !important;
   align-items: flex-start !important; }
 
-.align-items-end, .product-card__footer {
+.align-items-end {
   -webkit-box-align: end !important;
   -ms-flex-align: end !important;
   align-items: flex-end !important; }
 
-.align-items-center {
+.align-items-center, .product-card__footer {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important; }
@@ -7575,7 +7580,17 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: #ffffff !important; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #dee2e6 !important; } }
+    border: 1px solid #dee2e6 !important; }
+  .table-dark {
+    color: inherit; }
+    .table-dark th,
+    .table-dark td,
+    .table-dark thead th,
+    .table-dark tbody + tbody {
+      border-color: #dee2e6; }
+  .table .thead-dark th {
+    color: inherit;
+    border-color: #dee2e6; } }
 
 /* See http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/ */
 /* =-x =-x =-x =-x =-x =-x =-x =-x=- x=-
@@ -7759,7 +7774,7 @@ blockquote {
   .left-sidebar .content-area {
     width: 80%;
     margin: 0;
-    padding-left: 4rem; } }
+    padding-left: 3rem; } }
 
 @media (min-width: 992px) {
   .left-sidebar .content-area {
@@ -7905,10 +7920,12 @@ blockquote {
     font-weight: 400; }
 
 .product-card__footer .price {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 0 !important;
-  line-height: 1; }
+  line-height: 1;
+  font-family: "chaparral-pro", chaparral, Verdana, sans-serif;
+  font-weight: 400; }
 
 .product-card__footer .added_to_cart {
   position: absolute;
@@ -7918,6 +7935,10 @@ blockquote {
   font-size: 1.2rem;
   letter-spacing: 2px;
   padding: 2px 0; }
+
+.product-card__footer .woocommerce-Price-currencySymbol {
+  display: inline-block;
+  margin-right: .5rem; }
 
 .rh-categories-list {
   padding: 0;
@@ -8122,6 +8143,13 @@ body.tax-product_cat .site-content > .col-full {
   body.tax-product_cat .site-main .columns-3 ul.products li.product {
     width: 43.411765%;
     margin-right: 5.8823529412% !important; } }
+
+@media (min-width: 992px) {
+  body.tax-product_cat .site-main .columns-3 ul.products li.product {
+    width: 31.091177%;
+    margin-right: 1.5rem; }
+    body.tax-product_cat .site-main .columns-3 ul.products li.product:nth-child(3n) {
+      margin-right: 0; } }
 
 .style-guide__heading {
   font-size: 1rem;

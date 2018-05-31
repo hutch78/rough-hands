@@ -41,12 +41,20 @@ body.tax-product_cat {
             display: flex;
             flex-wrap: wrap;
         }
+    
     }
 
     .site-main .columns-3 ul.products li.product {
         @include media-breakpoint-only(md){
             width: 43.411765%;
             margin-right: 5.8823529412% !important; 
+        }
+        @include media-breakpoint-up(lg){
+            width: 31.091177%;
+            margin-right: 1.5rem;
+            &:nth-child(3n){
+                margin-right: 0;
+            }
         }
     }
     

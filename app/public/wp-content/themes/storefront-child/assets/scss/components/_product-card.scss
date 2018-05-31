@@ -26,13 +26,14 @@
     &__footer {
         @extend .d-flex;
         @extend .justify-content-between;
-        @extend .align-items-end;
+        @extend .align-items-center;
 
         .price {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-style: italic;
             margin-bottom: 0 !important;
             line-height: 1;
+            @include serif;
         }
 
         .added_to_cart {
@@ -43,6 +44,11 @@
             font-size: 1.2rem;
             letter-spacing: 2px;
             padding: 2px 0;
+        }
+
+        .woocommerce-Price-currencySymbol {
+            display: inline-block;
+            margin-right: .5rem;
         }
         
     }
