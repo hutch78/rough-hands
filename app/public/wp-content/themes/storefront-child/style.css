@@ -7717,9 +7717,9 @@ p {
   p:not(:last-child) {
     margin-bottom: 1rem; }
 
-ul, ol {
+ul:not(.page-numbers), ol {
   padding-left: 1.25rem; }
-  ul li, ol li {
+  ul:not(.page-numbers) li, ol li {
     font-size: 1rem;
     line-height: 1.5;
     font-family: "alternate-gothic-no-2-d",sans-serif;
@@ -8054,7 +8054,7 @@ blockquote {
   padding: 0; }
   .site-header__logo-wrapper {
     display: block;
-    padding: 1rem;
+    padding: 1rem 0;
     max-width: 13.5rem; }
     @media (min-width: 992px) {
       .site-header__logo-wrapper {
