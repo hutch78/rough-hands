@@ -1,41 +1,66 @@
 .product-card {
+    &__thumbnail {
+        display: block;
+        margin-bottom: 37px;
+        img {
+            margin-bottom: 0;
+        }
+    }
+    &__title,
+    &__description {
+        @include media-breakpoint-up(lg){
+            padding-right: 2.25rem;
+        }
+    }
     &__title {
         text-transform: none;
         text-align: left;
         line-height: 1.3;
         @include media-breakpoint-up(lg){
-            min-height: 68px;
-        }
-        .product-card__link {
-            font-size: 1.5rem;
-            letter-spacing: 1px;
-            text-decoration: none;
+            min-height: 72px;
         }
     }
     &__link {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        text-decoration: none;
+        line-height: 1.2;
         color: black;
         text-align: left;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,0);
+        transition: all 0.2s ease-in;
+        @include media-breakpoint-up(lg){
+            font-size: 1.625rem ;
+            &:hover {
+                -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,1);
+                box-shadow: inset 0 -1px 0 rgba(0,0,0,1);
+            }
+
+        }
     }
     &__description {
         text-align: left;
-        @extend .mb-2;
+        @extend .mb-3;
         p {
             @include serif;
         }
     }
     &__footer {
-        @extend .d-flex;
-        @extend .justify-content-between;
-        @extend .align-items-center;
+        @extend .d-md-flex;
+        @extend .justify-content-md-between;
+        @extend .align-items-md-center;
 
         .price {
             font-size: 1.5rem;
             font-style: italic;
-            margin-bottom: 0 !important;
             line-height: 1;
             @include serif;
+            @include media-breakpoint-up(lg){
+                margin-bottom: 0 !important;
+            }
         }
-
+        
         .added_to_cart {
             position: absolute;
             bottom: -3rem;
@@ -45,11 +70,26 @@
             letter-spacing: 2px;
             padding: 2px 0;
         }
+        
+        .btn {
+            @include media-breakpoint-up(lg){
+                font-size: 1rem;
+                margin-right: .5rem;
+            }
+        }
 
         .woocommerce-Price-currencySymbol {
             display: inline-block;
             margin-right: .5rem;
         }
         
+    }
+}
+
+.post-61 {
+    .product-card {
+        &__title {
+            padding-right: 0;
+        }
     }
 }

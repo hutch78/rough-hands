@@ -56,7 +56,7 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content" tabindex="-1">
-		<div class="col-full">
+		<div class="container d-flex flex-wrap flex-row-reverse">
 
 		<?php
 		/**
