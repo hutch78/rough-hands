@@ -15,7 +15,6 @@
     <?php 
         $store_location = wc_get_base_location();
         $WC_Countries = new WC_Countries();
-        var_dump();
     ?>
 	<?php do_action( 'storefront_before_footer' ); ?>
 
@@ -37,51 +36,26 @@
                 </div>
                 <div class="site-footer__col">
                     <h5 class="site-footer__col__heading">Page</h5>
-                   <ul class="menu-footer-navigation">
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Home</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">About</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Store</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Contact</a>
-                        </li>
-                   </ul>
+
+                    <?php wp_nav_menu(array(
+                        'theme_location'	=> 'footer_page_nav',
+                        'menu_class'		=> 'menu-footer-navigation'
+                    )); ?>
+                
                 </div>
                 <div class="site-footer__col">
                     <h5 class="site-footer__col__heading">Various</h5>
-                   <ul class="menu-footer-navigation">
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">FAQ</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Legal</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Pricing</a>
-                        </li>
-                   </ul>
+                    <?php wp_nav_menu(array(
+                        'theme_location'	=> 'footer_various_nav',
+                        'menu_class'		=> 'menu-footer-navigation'
+                    )); ?>
                 </div>
                 <div class="site-footer__col">
                     <h5 class="site-footer__col__heading">Social</h5>
-                   <ul class="menu-footer-navigation">
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Facebook</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Instagram</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Pinterest</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="<?php bloginfo('url'); ?>">Grease Monkeys</a>
-                        </li>
-                   </ul>
+                    <?php wp_nav_menu(array(
+                        'theme_location'	=> 'footer_social_nav',
+                        'menu_class'		=> 'menu-footer-navigation'
+                    )); ?>
                 </div>
             </div>
         </div>

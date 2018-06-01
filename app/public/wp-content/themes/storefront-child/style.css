@@ -8084,6 +8084,8 @@ blockquote {
         opacity: 1; }
         .site-footer .menu-footer-navigation .menu-item > a:hover {
           opacity: .5; }
+      .site-footer .menu-footer-navigation .menu-item.current_page_item a {
+        font-weight: bold; }
 
 .site-header {
   padding: 0;
