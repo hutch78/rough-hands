@@ -54,12 +54,18 @@ body.tax-product_cat {
             &:nth-child(2n){
                 margin-right: 0;
             }
+            &:last-child {
+                margin-right: 0 !important;  
+            }
         }
         @include media-breakpoint-up(lg){
             margin-right: 1.5rem;
             width: 31.091177%;
             &:nth-child(3n){
                 margin-right: 0;
+            }
+            &.last {
+                margin-right: 0 !important;  
             }
         }
     }

@@ -7905,7 +7905,8 @@ blockquote {
   display: block;
   margin-bottom: 37px; }
   .product-card__thumbnail img {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    width: 100%; }
 
 @media (min-width: 992px) {
   .product-card__title, .product-card__description {
@@ -8189,14 +8190,18 @@ body.tax-product_cat .site-content > .col-full {
     body.tax-product_cat .site-main ul.products.columns-3 li.product.last {
       margin-right: 4% !important; }
     body.tax-product_cat .site-main ul.products.columns-3 li.product:nth-child(2n) {
-      margin-right: 0; } }
+      margin-right: 0; }
+    body.tax-product_cat .site-main ul.products.columns-3 li.product:last-child {
+      margin-right: 0 !important; } }
 
 @media (min-width: 992px) {
   body.tax-product_cat .site-main ul.products.columns-3 li.product {
     margin-right: 1.5rem;
     width: 31.091177%; }
     body.tax-product_cat .site-main ul.products.columns-3 li.product:nth-child(3n) {
-      margin-right: 0; } }
+      margin-right: 0; }
+    body.tax-product_cat .site-main ul.products.columns-3 li.product.last {
+      margin-right: 0 !important; } }
 
 .style-guide__heading {
   font-size: 1rem;
