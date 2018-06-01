@@ -35,7 +35,10 @@ require('includes/login/rough-hands-custom-login.php');
 register_nav_menus([
 	"left_side_nav" => "Left Side Navigation",
     "right_side_nav" => "Right Side Navigation",
-    "categories_nav" => "Categories Navigation"
+    "categories_nav" => "Categories Navigation",
+    "footer_page_nav" => "Footer - Pages Navigation",
+    "footer_various_nav" => "Footer - Various Navigation",
+    "footer_social_nav" => "Footer - Social Navigation",
 ]);
 
 /**

@@ -12,6 +12,11 @@
 		</div><!-- .col-full -->
 	</div><!-- #content -->
 
+    <?php 
+        $store_location = wc_get_base_location();
+        $WC_Countries = new WC_Countries();
+        var_dump();
+    ?>
 	<?php do_action( 'storefront_before_footer' ); ?>
 
 	<footer class="site-footer">
@@ -22,10 +27,10 @@
                 <div class="site-footer__col contact-col">
                     <h5 class="site-footer__col__heading">Contact</h5>
                     <address class="mb-1">
-                        Rough Hands Barber Shop<br />
-                        8 Walton City<br />
-                        Imperial beach<br />
-                        Wa 574311
+                        <?php bloginfo('title'); ?><br />
+                        <?php echo $WC_Countries->get_base_address(); ?><br />
+                        <?php echo $WC_Countries->get_base_city(); ?><br />
+                        <?php echo $WC_Countries->get_base_state(); ?> <?php echo $WC_Countries->get_base_postcode(); ?>
                     </address>
                     <a href="tel:71452107757" class="footer-link">7-(145)210-7757</a>
                     <a href="mailto:heyguys@rough-hands.com" class="footer-link">heyguys@rough-hands.com</a>
