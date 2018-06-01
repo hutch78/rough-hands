@@ -20,7 +20,7 @@
 
 	<footer class="site-footer">
         
-        <div class="container">
+        <div class="container pr-lg-7">
             <div class="site-footer__inner">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/footer-blades.svg" alt="" class="site-footer__icon">
                 <div class="site-footer__col contact-col">

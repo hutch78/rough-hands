@@ -8026,8 +8026,11 @@ blockquote {
       transform: translate3d(0, -10px, 0); }
 
 .site-footer {
-  background: black;
+  background: #000000;
   color: white; }
+  @media (min-width: 992px) {
+    .site-footer > .container {
+      padding-right: 7rem; } }
   @media (max-width: 991.98px) {
     .site-footer__icon {
       max-width: 50%;
@@ -8067,9 +8070,6 @@ blockquote {
   .site-footer__col .footer-link:not(.button) {
     display: block;
     color: white; }
-  @media (min-width: 768px) {
-    .site-footer__col.contact-col {
-      padding-left: 5rem; } }
   .site-footer .menu-footer-navigation {
     margin: 0;
     padding: 0;
